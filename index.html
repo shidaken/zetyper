@@ -8,19 +8,51 @@
 .result{
 font-size:20px;
 }
+input{
+    background-color:#555;
+    width:98%;
+    height:40px;
+    margin:0 auto;
+    flex-direction: column; 
+    gap:20px;
+    margin:0 auto;
+}
+body{
+    background-color:black;
+}
+h1,h2,p{
+    color:white;
+}
+
+.send{
+    background-color:#0f3;
+    text-align:center;
+}
+.send:hover{
+    background-color:white;
+}
+.background{
+    background-color:#aaa;
+    width:60%;
+    gap:20px,0px;
+    margin:0 auto;
+}
 </style>
 </head>
 
 <body>
 <h1>ζyperpoint計算機構</h1>
 <p>ζyperポイントの計算機構です。</p>
+<div class="background">
 <input id="ety" autocomplete="off" placeholder="e-typing">
 <input id="dtr" autocomplete="off" placeholder="打トレ">
 <input id="tyz" autocomplete="off" placeholder="タイピンガーZ">
 <input id="tys" autocomplete="off" placeholder="タイピング速度測定">
 <input id="zet" autocomplete="off" placeholder="ζyper腕試し">
 <input id="zew" autocomplete="off" placeholder="ζyper単語腕試し">
-<button id="send">計算</button>
+<br>
+<h3 class="send" id="send">計算</h3>
+</div>
 <p class="result" id="result">計算結果がここに出ます・・・</p>
 <h2>使い方/How to use</h2>
 <p>それぞれのハイスコアを入力して計算を押してください。</p>
@@ -32,7 +64,7 @@ button.addEventListener("click",function(){
 let records=[$("ety"),$("dtr"),$("tyz"),$("tys"),$("zet"),$("zew")];
 const result=$("result");
 rec=records.map(r => Number(r.value));
-result.textContent=rec[0]+(rec[1]+rec[2]+rec[3]*2)/5*4+(rec[4]+rec[5])/10;
+result.textContent=String(rec[0]+(rec[1]+rec[2]+rec[3]*2)/5*4+(rec[4]+rec[5])/10)+"pt";
 });
 
 </script>
