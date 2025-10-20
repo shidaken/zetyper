@@ -10,15 +10,15 @@ font-size:20px;
 }
 input{
     background-color:#555;
-    width:98%;
+    width:50%;
     height:40px;
-    margin:0 auto;
-    flex-direction: column; 
-    gap:20px;
-    margin:0 auto;
+    flex-direction: column;
+    margin:5px auto;
+    color:white;
+    border-radius: 0;
 }
 body{
-    background-color:black;
+    background-color:#555;
 }
 h1,h2,p{
     color:white;
@@ -27,15 +27,22 @@ h1,h2,p{
 .send{
     background-color:#0f3;
     text-align:center;
+    font-size:35px;
+    height:50px;
+    width:60%;
+    margin:20px auto;
 }
 .send:hover{
-    background-color:white;
+    background-color:#4f7;
+    
 }
 .background{
-    background-color:#aaa;
+    background-color:black;
     width:60%;
-    gap:20px,0px;
-    margin:0 auto;
+    margin:20px auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center
 }
 </style>
 </head>
@@ -51,9 +58,9 @@ h1,h2,p{
 <input id="zet" autocomplete="off" placeholder="ζyper腕試し">
 <input id="zew" autocomplete="off" placeholder="ζyper単語腕試し">
 <br>
-<h3 class="send" id="send">計算</h3>
-</div>
+<h3 class="send" id="send">submit</h3>
 <p class="result" id="result">計算結果がここに出ます・・・</p>
+</div>
 <h2>使い方/How to use</h2>
 <p>それぞれのハイスコアを入力して計算を押してください。</p>
 <p>made by shidaken ζyper開発班</p>
